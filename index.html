@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>बै-Thak Open Mic | Vapi</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="script" href="" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header
+      data-aos="fade-left"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-out"
+    >
+      <div class="logo">बै-Thak</div>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="openmic.html" class="nav-link">Open Mic?</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="updates.html" class="nav-link">Updates!!</a>
+        <button class="boton" id="boton" onclick=" toggleMenu() " name="boton">
+          ☰
+        </button>
+        <!--  -->
+
+        <div class="popup-menu" id="myMenu">
+          <a href="index.html">Home</a>
+          <a href="openmic.html">Open Mic?</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="updates.html">Updates!!</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <img
+        src="logo.png"
+        alt="logo"
+        class="loki"
+        data-aos="zoom-out-down"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+      />
+      <h1
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+      >
+        Your Stage, Your Voice
+      </h1>
+      <p
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+      >
+        Vapi’s First Open Mic with Non-Veg & Dark Humor Allowed!
+      </p>
+      <a
+        href="openmic.html"
+        class="btn"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        >Register Now</a
+      >
+    </section>
+
+    <section class="about" data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out">
+      <h2>About बै-Thak</h2>
+      <p>
+        बै-Thak is an open mic platform in Vapi, Gujarat where performers
+        express freely – comedy, poetry, rap, singing, storytelling! We’re the
+        FIRST in Vapi to allow non-veg & dark humor creatively.
+      </p>
+      <a href="openmic.html" class="btn-secondary">What is Open Mic?</a>
+    </section>
+
+    <!-- Next Event -->
+    <section class="event" data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out">
+      <h2>Upcoming Event</h2>
+      <p><strong>Date:</strong> 25th July 2025</p>
+      <p><strong>Venue:</strong> XYZ Café, Vapi</p>
+      <p><strong>Entry:</strong> Free</p>
+      <a href="openmic.html" class="btn">Register Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Follow us:
+        <a href="https://instagram.com/baithak.vapi" target="_blank"
+          >Instagram</a
+        >
+        |
+        <a href="mailto:baithak.vapi@gmail.com">Email</a>
+      </p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("myMenu").classList.toggle("show");
+      }
+
+      // Optional: close menu if clicking outside
+      window.onclick = function (event) {
+        if (!event.target.matches(".boton")) {
+          document.getElementById("myMenu").classList.remove("show");
+        }
+      };
+    </script>
+    <script>
+      AOS.init(); // just initialize
+    </script>
+  </body>
+</html>
