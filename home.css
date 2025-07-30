@@ -11,7 +11,7 @@ body {
   background-attachment: fixed; /* ✅ keeps it stuck 
   background-repeat: no-repeat;
   background-size: cover; */
-  background: linear-gradient(TO bottom, rgb(97, 8, 97), rgb(0, 0, 0));
+  background: linear-gradient(TO bottom, rgb(97, 8, 97) , rgb(0, 0, 0));
   /* background-color: rgb(68, 8, 68); */
   color: #fff;
   line-height: 1.6;
@@ -154,6 +154,45 @@ footer a:hover {
   display: block; /* hidden by default */
   backdrop-filter: blur(200px);
 }
+.line-cont {
+  display: flex;
+  justify-content: center;
+}
+.line {
+  animation: grow 1s ease forwards;
+  animation-delay: 0.3s;
+  background-color: gold;
+  height: 2px;
+  border: none;
+}
+
+    .bar-container {
+   
+      height: 2px;
+    display: flex;
+    justify-content: center;
+    
+    }
+
+    .scroll-bar {
+      height: 100%;
+      width: 0%;
+      background: gold;
+      transition: width 0.8s linear;
+      border: none;
+    }
+@keyframes grow {
+  from {
+    width: 0%;
+    opacity: 0%;
+   
+  }
+  to {
+    width: 90%;
+    opacity: 100%;
+    
+  }
+}
 @media (max-width: 660px) {
   .nav-link {
     display: none;
@@ -167,6 +206,4 @@ footer a:hover {
   .boton {
     display: flex;
   }
-}
-@media (max-width: 660px) {
 }
