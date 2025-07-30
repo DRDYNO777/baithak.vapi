@@ -11,7 +11,7 @@ body {
   background-attachment: fixed; /* ✅ keeps it stuck 
   background-repeat: no-repeat;
   background-size: cover; */
-  background: linear-gradient(TO bottom, rgb(97, 8, 97) , rgb(0, 0, 0));
+  background: linear-gradient(TO bottom, rgb(97, 8, 97), rgb(0, 0, 0));
   /* background-color: rgb(68, 8, 68); */
   color: #fff;
   line-height: 1.6;
@@ -166,31 +166,41 @@ footer a:hover {
   border: none;
 }
 
-    .bar-container {
-   
-      height: 2px;
-    display: flex;
-    justify-content: center;
-    
-    }
+.bar-container {
+  height: 2px;
+  display: flex;
+  justify-content: center;
+}
 
-    .scroll-bar {
-      height: 100%;
-      width: 0%;
-      background: gold;
-      transition: width 0.8s linear;
-      border: none;
-    }
+.scroll-bar {
+  height: 100%;
+  width: 0%;
+  background: gold;
+  transition: width 0.8s linear;
+  border: none;
+}
+
+.card-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+  margin-left: 50%;
+}
+.card-right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 50%;
+}
 @keyframes grow {
   from {
     width: 0%;
     opacity: 0%;
-   
   }
   to {
     width: 90%;
     opacity: 100%;
-    
   }
 }
 @media (max-width: 660px) {
@@ -205,5 +215,11 @@ footer a:hover {
   }
   .boton {
     display: flex;
+  }
+  .card-left h2 {
+    font-size: 24px;
+  }
+  .card-right h2 {
+    font-size: 24px;
   }
 }
