@@ -82,22 +82,41 @@
         >Register Now</a
       >
     </section>
-
-    <section
-      class="about"
+    <div
+      class="bar-container"
       data-aos="fade-up"
       data-aos-duration="1500"
       data-aos-easing="ease-in-out"
     >
-      <h2>About बै-Thak</h2>
-      <p>
-        बै-Thak is an open mic platform in Vapi, Gujarat where performers
-        express freely – comedy, poetry, rap, singing, storytelling! We’re the
-        FIRST in Vapi to allow non-veg & dark humor creatively.
-      </p>
-      <a href="openmic.html" class="btn-secondary">What is Open Mic?</a>
-    </section>
+      <hr class="scroll-bar" />
+    </div>
+    <section>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+      >
+        <h2>About बै-Thak</h2>
+        <p>
+          बै-Thak is an open mic platform in Vapi, Gujarat where performers
+          express freely – comedy, poetry, rap, singing, storytelling! We’re the
+          FIRST in Vapi to allow non-veg & dark humor creatively.
+        </p>
+        <p>बै-Thak is not just an open mic platform — it’s a celebration of raw expression, unfiltered talent, and unapologetic creativity. It’s a space where voices of all kinds come together — whether loud, soft, rhythmic, rebellious, or poetic — to be heard, felt, and celebrated.
 
+Whether you're a seasoned performer or someone taking the mic for the first time, बै-Thak is the stage for stand-up comedy, poetry, storytelling, singing, rapping, or anything else that flows from your soul. Got a quirky talent or a genre-defying act? Bring it on — we’re all ears.
+
+</p>
+      </div>
+    </section>
+    <div
+      class="bar-container"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-out"
+    >
+      <hr class="scroll-bar" />
+    </div>
     <!-- Next Event -->
     <section
       class="event"
@@ -105,6 +124,8 @@
       data-aos-duration="1500"
       data-aos-easing="ease-in-out"
     >
+ 
+      <br />
       <h2>Upcoming Event</h2>
       <p><strong>Date:</strong> 25th July 2025</p>
       <p><strong>Venue:</strong> XYZ Café, Vapi</p>
@@ -135,6 +156,34 @@
           document.getElementById("myMenu").classList.remove("show");
         }
       };
+    </script>
+
+    <script>
+      function animateAllScrollBars() {
+        const bars = document.querySelectorAll(".scroll-bar");
+
+        bars.forEach((bar) => {
+          const container = bar.parentElement;
+          const rect = container.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+
+          if (rect.top < windowHeight && rect.bottom > 0) {
+            const visibleHeight =
+              Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+            const scrollPercent = visibleHeight / rect.height;
+            const clamped = Math.max(0, Math.min(1, scrollPercent));
+            bar.style.width = clamped * 90 + "%";
+          } else if (rect.top >= windowHeight) {
+            bar.style.width = "0%";
+          } else if (rect.bottom <= 0) {
+            bar.style.width = "100%";
+          }
+        });
+      }
+
+      window.addEventListener("scroll", animateAllScrollBars);
+      window.addEventListener("resize", animateAllScrollBars);
+      window.addEventListener("load", animateAllScrollBars);
     </script>
     <script>
       AOS.init(); // just initialize
