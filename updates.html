@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registeration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          #ced100,
+          #ca189e,
+          #7c0ffa,
+          #6b5b95,
+          #ced100,
+          #ca189e,
+          #7c0ffa,
+          #6b5b95
+        );
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
+        height: 100vh;
+      }
+      .card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 40%;
+        background-color: rgba(0, 0, 0, 0.144);
+        border: 5px white solid;
+        border-radius: 10px;
+        max-width: 400px;
+        min-width: 250px;
+      }
+      .card h1 {
+        color: gold;
+        font-size: 42px;
+        font-family: "Fascinate", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .card p {
+        color: gold;
+        font-size: 32px;
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+      button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: rgba(255, 255, 255, 0.253);
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+      span {
+        color: white;
+        font-size: 22px;
+      }
+      @media (max-width: 660px) {
+        .card h1 {
+          font-size: 34px;
+        }
+        .card p {
+          font-size: 24px;
+        }
+      }
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="card"
+      class="logo"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-out"
+    >
+      <h1>coming soon !!!</h1>
+      <p>
+        page is under devlopment  <br />
+        <span>come back later </span>
+      </p>
+      <br />
+      <button class="back-button" onclick="goBack()">⬅ Go Back</button>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back(); // Takes you to the last visited page
+      }
+    </script>
+    <script>
+      AOS.init(); // just initialize
+    </script>
+  </body>
+</html>

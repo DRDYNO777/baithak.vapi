@@ -11,7 +11,8 @@ body {
   background-attachment: fixed; /* ✅ keeps it stuck 
   background-repeat: no-repeat;
   background-size: cover; */
-  background: linear-gradient(TO bottom, rgb(97, 8, 97), rgb(0, 0, 0));
+background: linear-gradient(135deg, #753a88, #cc2b5e,#753a88, #cc2b5e);
+
   /* background-color: rgb(68, 8, 68); */
   color: #fff;
   line-height: 1.6;
@@ -22,7 +23,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #700c7e6c;
+ background: linear-gradient(135deg, #743a887e,#cc2b5e7c );
   backdrop-filter: blur(15px);
   width: 90vw;
   margin: auto;
@@ -105,7 +106,7 @@ h2 {
 footer {
   text-align: center;
   padding: 20px;
-  background: #000;
+  background: transparent;
 }
 footer a {
   color: gold;
