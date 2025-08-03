@@ -11,7 +11,7 @@ body {
   background-attachment: fixed; /* ✅ keeps it stuck 
   background-repeat: no-repeat;
   background-size: cover; */
-background: linear-gradient(135deg, #753a88, #cc2b5e,#753a88, #cc2b5e);
+  background: linear-gradient(135deg, #753a88, #cc2b5e, #753a88, #cc2b5e);
 
   /* background-color: rgb(68, 8, 68); */
   color: #fff;
@@ -23,7 +23,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
- background: linear-gradient(135deg, #743a887e,#cc2b5e7c );
+  background: linear-gradient(135deg, #743a887e, #cc2b5e7c);
   backdrop-filter: blur(15px);
   width: 90vw;
   margin: auto;
@@ -65,6 +65,8 @@ nav a:hover {
 .hero h1 {
   font-size: 48px;
   color: gold;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
 }
 .hero p {
   font-size: 20px;
@@ -90,6 +92,10 @@ h2 {
   font-size: 32px;
   color: gold;
   margin-bottom: 20px;
+
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .btn-secondary {
@@ -194,6 +200,46 @@ footer a:hover {
   text-align: right;
   width: 50%;
 }
+.pehali {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 42px;
+}
+/* From Uiverse.io by JaydipPrajapati1910 */
+.loader {
+  width: 33px;
+  height: 33px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 0 50%;
+  background: #0000;
+  background-image: radial-gradient(
+    circle 11.2px at 50% 50%,
+    #0000 94%,
+    #ff4747
+  );
+}
+
+.loader:after {
+  animation: pulse-ytk0dhmd 1s infinite;
+  transform: perspective(336px) translateZ(0px);
+}
+
+@keyframes pulse-ytk0dhmd {
+  to {
+    transform: perspective(336px) translateZ(168px);
+    opacity: 0;
+  }
+}
+
 @keyframes grow {
   from {
     width: 0%;
